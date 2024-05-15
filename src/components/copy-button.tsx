@@ -17,7 +17,7 @@ export function CopyButton({ text }: CopyButtonProps) {
             description: 'Copied to clipboard',
             variant: 'subtle',
             duration: 1000,
-            position: 'bottom-left',
+            position: 'bottom',
           })
         )
       }}

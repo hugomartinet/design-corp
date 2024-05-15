@@ -1,9 +1,10 @@
-import { Flex, useBreakpointValue } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
+import { useIsMobile } from '../../hooks/useIsMobile'
 import { DesktopHeader } from './desktop-header'
 import { MobileHeader } from './mobile-header'
 
 export function Header() {
-  const isMobile = useBreakpointValue({ base: true, md: false })
+  const isMobile = useIsMobile()
   return (
     <Flex
       position="fixed"
