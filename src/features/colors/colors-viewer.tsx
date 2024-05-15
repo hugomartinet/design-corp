@@ -1,4 +1,4 @@
-import { Box, HStack, Text, VStack } from '@chakra-ui/react'
+import { Box, HStack, Text, VStack, Wrap } from '@chakra-ui/react'
 import { colord } from 'colord'
 import { CopyButton } from '../../components/copy-button'
 
@@ -11,11 +11,11 @@ export function ColorsViewer({ title, colors }: ColorsViewerProps) {
   return (
     <>
       <Text fontSize="2xl">{title}</Text>
-      <HStack spacing={8}>
+      <Wrap spacing={4}>
         {colors.map(color => (
           <Color key={color} value={color} />
         ))}
-      </HStack>
+      </Wrap>
     </>
   )
 }
@@ -30,8 +30,8 @@ function Color({ value }: ColorProps) {
   const rgb = color.toRgbString()
 
   return (
-    <HStack spacing={4}>
-      <Box bgColor={hexCode} boxSize={24} rounded="md" />
+    <HStack>
+      <Box bgColor={hexCode} boxSize={20} rounded="md" />
 
       <VStack align="start">
         <CopyButton text={hexCode} />

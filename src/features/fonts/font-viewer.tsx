@@ -11,7 +11,7 @@ const SAMPLE_TEXT = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456
 
 export function FontViewer({ title, fontFamily, src }: FontViewerProps) {
   return (
-    <VStack spacing={8} align="start">
+    <VStack spacing={[4, 4, 8]} align="start">
       <Text fontSize="2xl">{title}</Text>
 
       <Text fontSize="3xl" fontFamily={fontFamily}>
